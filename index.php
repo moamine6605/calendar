@@ -8,6 +8,63 @@
     <title>Calendar</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    
+    <header>
+        <h1>Your Calendar</h1>
+    </header>
+
+    <div class="clock_container">
+        <div id="clock"></div>
+    </div>
+
+    <div class="calendar">
+        <div class="nav-btn-container">
+            <button class="nav-btn"></button>
+            <h2 id="monthYear"></h2>
+            <button class="nav-btn"></button>
+        </div>
+
+        <div class="calendar-grid" id="calendar"></div>
+
+        <!-- Modal for Add/Edit/Delete Appointment -->
+         <div id="eventSelectorWrapper">
+            <label for="eventSelector">
+                <strong>Select Event:</strong>
+            </label>
+            <select id="eventSelector">
+                <option disabled selected>Choose Event...</option>
+            </select>
+         </div>
+
+         <!-- Main Form -->
+          <form id="eventForm" method="post">
+            <input type="hidden" name="action" value="add">
+            <input type="hidden" name="event_id" id="eventId">
+
+            <label for="courseName">Course Title:</label>
+            <input type="text" name="course_name" id="courseName" required>
+
+            <label for="instructorName">Instructor Name:</label>
+            <input type="text" name="instructor_name" id="instructorName" required>
+
+            <label for="startDate">Start Date:</label>
+            <input type="date" name="start_date" id="startDate" required>
+
+            <label for="endDate">End Date:</label>
+            <input type="date" name="end_date" id="endDate" required>
+
+            <input type="submit" value="Save">
+
+            <!-- Delete Form -->
+             <form action="" method="post">
+                <input type="hidden" name="action" value="delete">
+                <input type="hidden" name="event_id" id="deleteEventId">
+                <input type="submit" class="submit-btn" value="Delete">
+             </form>
+
+             <!-- Cancel -->
+              <input type="button" class="submit-btn" value="Cancel">
+          </form>
+    </div>
 </body>
 </html>
