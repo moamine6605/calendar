@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Calendar to track tasks">
     <link rel="stylesheet" href="style.css" />
-    <script src="calendar.js" />
     <title>Calendar</title>
 </head>
 
@@ -74,6 +73,7 @@
             <input type="button" class="submit-btn" value="Cancel">
         </div>
     </div>
+    <script src="calendar.js"></script>
 </body>
 
 </html>
